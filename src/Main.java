@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
@@ -68,6 +69,35 @@ public class Main {
 
         for(int i = 0; i < betterEmployees.size(); i++) {
             System.out.println(betterEmployees.get(i));
+        }
+
+        System.out.println("------------------------------------------------");
+
+        ArrayList<String> evenBetterEmployees = new ArrayList<String>();
+
+        evenBetterEmployees.add("Hans-Peter");
+        evenBetterEmployees.add("Simone");
+        evenBetterEmployees.add("Jochen");
+        evenBetterEmployees.add("Lara");
+
+        for(int i = 0; i < evenBetterEmployees.size(); i++) {
+            System.out.println(evenBetterEmployees.get(i));
+        }
+
+        System.out.println();
+
+        Collections.sort(evenBetterEmployees);
+
+        for(int i = 0; i < evenBetterEmployees.size(); i++) {
+            System.out.println(evenBetterEmployees.get(i));
+        }
+
+        System.out.println();
+
+        Collections.reverse(evenBetterEmployees);
+
+        for(String employee : evenBetterEmployees) {
+            System.out.println(employee);
         }
     }
 }
